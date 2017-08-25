@@ -1,0 +1,78 @@
+Meeting Room Booking System
+http://mrbs.sourceforge.net/
+-------------------------------
+
+The Meeting Room Booking System (MRBS) is a PHP-based application for
+booking meeting rooms (surprisingly!). I got annoyed with the piles of books
+which were being used to book meetings. They were slow, hard to edit and only
+at the reception desk. I thought that a nice web-based system would be much
+nicer.
+
+Some parts of this are based on WebCalender 0.9.4 by Craig Knudsen 
+(http://www.radix.net/~cknudsen/webcalendar/) but there is now very little
+which is similar. There are fundamental design goal differences between
+WebCalendar and MRBS - WC is for individuals, MRBS is for meeting rooms.
+
+------
+To Use
+------
+See the INSTALL file for installation instructions.
+
+Once it's installed try going to http://yourhost/mrbs/
+
+The first thing you'll need to do is login as an administrator and create
+areas and rooms.
+
+The default authentication scheme uses a database table in the MRBS
+database. To create the first user click the "User list" link in the
+top-right of the page. If there aren't any users defined in your database
+yet, you will be able to create the first administrator.
+
+Once you have logged in as an administrator you can click on "Rooms" and
+create first an "Area", and then a "Room" within that area.
+
+There are other ways to configure authentication in MRBS, see the
+file AUTHENTICATION for a more complete description.
+
+The latest version was tested with PHP 5.3.3, Apache 2.4, and either
+MySQL 5.6+ or PostgreSQL 8.2+. It should work on just about anything
+that's got PHP 5.3.3+ with MySQL 5.1+ or PostgreSQL 8.2+.
+
+It should be pretty easy to adjust it to your corporate colours - you can
+modify the themes under "Themes" or (preferably) copy an existing theme
+to a new directory and modify the new theme.
+
+See COPYING for licensing info.
+
+See NEWS for a history of changes.
+
+See AUTHENTICATION for information about user authentication/passwords.
+
+-------------
+Requirements:
+-------------
+- PHP 5.3.3+ with MySQL and/or PostgreSQL support
+- MySQL or PostgreSQL
+- Any web server that is supported by PHP
+
+Recommended:
+- JavaScript-enabled browser
+- CSS-enabled browser
+- PHP module connection to the server (also called SAPI) if you want to use any
+  of the basic http authentication schemes provided.
+
+(If you are considering porting MRBS to another database, see README.sqlapi)
+
+Warning:
+- Some users reported errors using some accelerators (APC, PHP Accelerator).
+  If you get messages like this : "Internal Zend error - Missing class
+  information for ...", your accelerator is the cause.
+
+------
+Usage:
+------
+The current project maintainer reports using it at work with about 150 clients.
+Many other reports of successful use have been seen on the MRBS mailing list,
+and your report would be welcome there too. Let us know who is using MRBS!
+
+$Id$
